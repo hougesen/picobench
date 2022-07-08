@@ -181,46 +181,4 @@ describe.concurrent('lib/benchAsync.ts', async () => {
         expect(benchmarkResult).toHaveProperty('maximum');
         expect(benchmarkResult).toHaveProperty('runs');
     });
-
-    it.concurrent('300 milliseconds function', async () => {
-        const sleepDuration = 300;
-
-        const benchmarkResult = await benchAsync(async () => await sleep(sleepDuration));
-
-        expect(benchmarkResult?.minimum).toBeGreaterThan(sleepDuration - 2);
-
-        expect(benchmarkResult?.maximum).toBeLessThan(sleepDuration + expectedOverheadMs);
-
-        expect(benchmarkResult?.average).toBeGreaterThanOrEqual(sleepDuration - 2);
-
-        expect(benchmarkResult?.average).toBeLessThan(sleepDuration + expectedOverheadMs);
-
-        expect(benchmarkResult).toHaveProperty('ops');
-        expect(benchmarkResult).toHaveProperty('average');
-        expect(benchmarkResult).toHaveProperty('median');
-        expect(benchmarkResult).toHaveProperty('minimum');
-        expect(benchmarkResult).toHaveProperty('maximum');
-        expect(benchmarkResult).toHaveProperty('runs');
-    });
-
-    it.concurrent('500 milliseconds function', async () => {
-        const sleepDuration = 500;
-
-        const benchmarkResult = await benchAsync(async () => await sleep(sleepDuration));
-
-        expect(benchmarkResult?.minimum).toBeGreaterThan(sleepDuration - 2);
-
-        expect(benchmarkResult?.maximum).toBeLessThan(sleepDuration + expectedOverheadMs);
-
-        expect(benchmarkResult?.average).toBeGreaterThanOrEqual(sleepDuration - 2);
-
-        expect(benchmarkResult?.average).toBeLessThan(sleepDuration + expectedOverheadMs);
-
-        expect(benchmarkResult).toHaveProperty('ops');
-        expect(benchmarkResult).toHaveProperty('average');
-        expect(benchmarkResult).toHaveProperty('median');
-        expect(benchmarkResult).toHaveProperty('minimum');
-        expect(benchmarkResult).toHaveProperty('maximum');
-        expect(benchmarkResult).toHaveProperty('runs');
-    });
 });
