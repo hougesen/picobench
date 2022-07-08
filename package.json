@@ -1,7 +1,7 @@
 {
-    "name": "benchy",
+    "name": "picobench",
     "version": "0.0.1",
-    "description": "Library for benchmark functions",
+    "description": "Library for testing performance of functions",
     "private": false,
     "keywords": [],
     "main": "dist/index.js",
@@ -20,12 +20,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/hougesen/benchy.git"
+        "url": "git+https://github.com/hougesen/picobench.git"
     },
     "bugs": {
-        "url": "https://github.com/hougesen/benchy/issues"
+        "url": "https://github.com/hougesen/picobench/issues"
     },
-    "homepage": "https://github.com/hougesen/benchy#readme",
+    "homepage": "https://github.com/hougesen/picobench#readme",
     "scripts": {
         "build": "tsc",
         "build:clean": "tsc --build --clean",
