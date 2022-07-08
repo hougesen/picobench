@@ -13,7 +13,7 @@ function fib(n = 30): number {
     return fib(n - 2) + fib(n - 1);
 }
 
-describe('lib/benchSync', () => {
+describe.concurrent('lib/benchSync', () => {
     it.concurrent('can call benchSync function without params', () => {
         const benchmarkResult = benchSync(fib);
 

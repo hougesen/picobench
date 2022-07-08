@@ -3,7 +3,7 @@ import { benchAsync } from '../src/lib/benchAsync';
 
 const expectedOverheadMs = 10;
 
-const defaultSleepValue = 500;
+const defaultSleepValue = 100;
 
 function sleep(ms = defaultSleepValue) {
     return new Promise((resolve) => setTimeout(resolve, ms));
