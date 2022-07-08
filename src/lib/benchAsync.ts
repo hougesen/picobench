@@ -1,4 +1,5 @@
 import * as microtime from 'microtime';
+
 import { IBenchOptions, IBenchResult } from '../';
 import { calculateMedian } from './calculateMedian';
 

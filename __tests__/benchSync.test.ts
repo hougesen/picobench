@@ -1,4 +1,5 @@
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
+
 import { benchSync } from '../src/lib/benchSync';
 
 /**

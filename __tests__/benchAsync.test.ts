@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+
 import { benchAsync } from '../src/lib/benchAsync';
 
 const expectedOverheadMs = 10;
