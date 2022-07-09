@@ -1,14 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
 import { benchAsync } from '../src/lib/benchAsync';
-
-const expectedOverheadMs = 10;
-
-const defaultSleepValue = 100;
-
-function sleep(ms = defaultSleepValue) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
+import { expectedOverheadMs } from './utils/expectedOverheadMs';
+import { defaultSleepValue, sleep } from './utils/sleep';
 
 describe.concurrent('lib/benchAsync.ts', async () => {
     it.concurrent('can call benchAsync function without params', async () => {

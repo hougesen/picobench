@@ -1,20 +1,8 @@
 import { describe, expect, it } from 'vitest';
-
 import { benchSync } from '../src/lib/benchSync';
+import { fib } from './utils/fib';
 
-/**
- * @summary unoptimized fibonacci number calculator
- * @note doesn't use memorization to increase time to calculate
- */
-function fib(n = 30): number {
-    if (n < 2) {
-        return n;
-    }
-
-    return fib(n - 2) + fib(n - 1);
-}
-
-describe.concurrent('lib/benchSync', () => {
+describe.concurrent('lib/benchSync.ts', () => {
     it.concurrent('can call benchSync function without params', () => {
         const benchmarkResult = benchSync(fib);
 
