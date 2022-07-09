@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+
 import { benchSync } from '../src/lib/benchSync';
 import { fib } from './utils/fib';
 
